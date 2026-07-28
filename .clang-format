@@ -1,0 +1,35 @@
+﻿BasedOnStyle: Microsoft
+IndentWidth: 2
+TabWidth: 2
+ContinuationIndentWidth: 2
+UseTab: Never
+BreakConstructorInitializers: BeforeComma
+AllowAllConstructorInitializersOnNextLine: false
+BreakBeforeBraces: Custom
+EmptyLineBeforeAccessModifier: Always
+MaxEmptyLinesToKeep: 1
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterFunction: true
+  AfterNamespace: true  
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+PointerAlignment: Left
+CompactNamespaces: false                
+SpacesInParentheses: true
+FixNamespaceComments: true               
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowAllArgumentsOnNextLine: true
+ColumnLimit: 120
+AlignAfterOpenBracket: Align
+BinPackParameters: false
+BinPackArguments: false
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: Yes
+SeparateDefinitionBlocks: Always
