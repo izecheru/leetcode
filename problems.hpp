@@ -1,13 +1,25 @@
 #pragma once
+#include <string>
 
 namespace myNamespace
 {
+int pow( int, int );
+int atoi( const std::string& );
+
 int atoi( const std::string& number )
 {
+  auto i{ 0u };
   for ( const auto& c : number )
   {
     if ( c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c == ' ' )
       return 0;
+
+    if ( i != 0u && c == '-' || c == '+' )
+    {
+      return 0;
+    }
+
+    ++i;
   }
 
   const size_t minPos = number.find( '-' );
@@ -35,6 +47,9 @@ int atoi( const std::string& number )
 
   int it{ 0 };
   int res{ 0 };
+
+  // even with my pow it is faster than std::pow
+  // size_t i_{ number.size() - 2 };
   for ( ; it < number.size(); ++it )
   {
     if ( flags & ( skip ) )
@@ -51,8 +66,22 @@ int atoi( const std::string& number )
     // 3214
     // -3214
     res = res * 10 + ( number[it] - '0' );
+    // res += ( number[it] - '0' ) * pow( 10, i_ );
   }
 
   return flags & ( flip ) ? res * -1 : res;
+}
+
+int pow( int a, int b )
+{
+  int result = 1;
+
+  while ( b > 0 )
+  {
+    result *= a;
+    --b;
+  }
+
+  return result;
 }
 } // namespace myNamespace
