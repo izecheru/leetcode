@@ -3,8 +3,6 @@
 
 namespace myNamespace
 {
-int pow( int, int );
-int atoi( const std::string& );
 
 int atoi( const std::string& number )
 {
@@ -72,16 +70,25 @@ int atoi( const std::string& number )
   return flags & ( flip ) ? res * -1 : res;
 }
 
-int pow( int a, int b )
+template <typename T>
+double pow( T a, T b )
 {
-  int result = 1;
+  if ( b == 0 )
+    return 1.0;
 
+  bool negative = b < 0;
+  if ( negative )
+  {
+    b = -b;
+  }
+
+  double result = 1.0;
   while ( b > 0 )
   {
     result *= a;
     --b;
   }
 
-  return result;
+  return negative ? 1.0 / result : result;
 }
 } // namespace myNamespace

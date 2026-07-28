@@ -47,4 +47,4 @@ BENCHMARK( BM_OriginalAtoiNegative )->Unit( benchmark::kNanosecond );
 BENCHMARK( BM_Pow )->Unit( benchmark::kNanosecond );
 BENCHMARK( BM_OriginalPow )->Unit( benchmark::kNanosecond );
 
-BENCHMARK_MAIN();
+ BENCHMARK_MAIN();

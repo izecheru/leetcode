@@ -18,6 +18,7 @@ TEST( LeetCodeTests, PowTest )
   EXPECT_EQ( myNamespace::pow( 0, 2 ), 0 );
   EXPECT_EQ( myNamespace::pow( 1, 2 ), 1 );
   EXPECT_EQ( myNamespace::pow( 4, 2 ), 16 );
-  EXPECT_EQ( myNamespace::pow( 125, 3 ), 1953125 );
+  EXPECT_EQ( myNamespace::pow( -2, -3 ), -0.125 );
+  EXPECT_EQ( myNamespace::pow( -2, -5 ), -0.03125 );
 }
 } // namespace tests
